@@ -6,8 +6,6 @@ import os
 import shutil
 from collections import OrderedDict
 
-# MozillaCacheView.exe /stab zzz.txt
-
 pathToMozillaCacheView = "MozillaCacheView.exe"
 pathToExtractCache = "./cacheFolder/"
 videoDestinationFolder = "./videoFolder/"
@@ -94,7 +92,7 @@ def concatenateFilesYT(files3):
             
 
 def youtubeLive():
-    fileFormat = "video/mp4"
+    #fileFormat = "video/mp4"
     fileFormat = "video/webm"
     cacheList = getCacheList(fileFormat)
     files3 = getParameters(cacheList)
@@ -103,7 +101,8 @@ def youtubeLive():
     concatenateFilesYT(sortedList)
 
 def youtube():
-    fileFormat = "video/webm"
+    #fileFormat = "video/webm"
+    fileFormat = "video/mp4"
     cacheList = getCacheList(fileFormat)
     files3 = getParameters(cacheList)
     sortedList = sortFiles(files3)
